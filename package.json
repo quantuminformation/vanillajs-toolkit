@@ -1,10 +1,11 @@
 {
-  "name": "vanillajs-patterns ",
+  "name": "vanillajs-toolkit",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {
-    "prettier": "latest",
-    "serve": "latest"
+  "type": "module",
+  "files": ["js"],
+  "exports": {
+    "./*": "./js/*"
   },
   "scripts": {
     "start": "serve -s . -l 3000",
@@ -13,21 +14,28 @@
     "prettier": "prettier --write \"**/*.{js,json,ts,tsx,css,scss,html}\"",
     "build:blog": "node scripts/build-blog.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/quantuminformation/javascript-frameworks-forbidden.git"
+  "dependencies": {
+    "prettier": "latest",
+    "serve": "latest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/quantuminformation/javascript-frameworks-forbidden/issues"
-  },
-  "homepage": "https://github.com/quantuminformation/javascript-frameworks-forbidden#readme",
   "devDependencies": {
     "@vitest/coverage-v8": "^2.1.3",
     "happy-dom": "^15.7.4",
     "prettier-plugin-embed": "^0.4.4",
     "vitest": "^2.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantuminformation/vanillajs-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quantuminformation/vanillajs-toolkit/issues"
+  },
+  "homepage": "https://github.com/quantuminformation/vanillajs-toolkit#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
